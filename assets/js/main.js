@@ -2,28 +2,37 @@ const container = document.querySelector('.container');
 const search = document.querySelector('.search-box button');
 const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
-const error404 = document.querySelector('.not-found');
+const error404 = document.querySelector('.error404');
 
 search.addEventListener('click', ()=>{
     const apiKey= import.meta.env.VITE_API_KEY;
     const city = document.querySelector('.search-box input').value; 
     
-    if(city === '')
+    if(city === ''){
+        error404.style.display = 'none';
+        error404.classList.remove('fadeIn');
+        weatherBox.style.display = '';
+        weatherDetails.style.display = '';
+        weatherBox.classList.remove('fadeIn');
+        weatherDetails.classList.remove('fadeIn');
+        container.style.height= '';
         return;
+    }
 
         const apiUrl= import.meta.env.VITE_API_URL+`?q=${city}&units=metric&appid=${apiKey}`;
 
     fetch(apiUrl).then(response => response.json()).then(json => {
 
         if(json.cod === '404'){
-            container.computedStyleMap.height.height = '400px';
+            container.style.height= '400px';
             weatherBox.style.display = 'none';
             weatherDetails.style.display = 'none';
             error404.style.display = 'block';
             error404.classList.add('fadeIn');
             return;
         }
-
+        weatherBox.style.display = '';
+        weatherDetails.style.display = '';
         error404.style.display = 'none';
         error404.classList.remove('fadeIn');
 
@@ -58,7 +67,7 @@ search.addEventListener('click', ()=>{
         humidty.innerHTML = `${json.main.humidity}%`;
         wind.innerHTML = `${parseInt(json.wind.speed)}km/h`;
 
-        weatherBox.style.display = ' ';
+        weatherBox.style.display = '';
         weatherDetails.style.display = '';
         weatherBox.classList.add('fadeIn');
         weatherDetails.classList.add('fadeIn');

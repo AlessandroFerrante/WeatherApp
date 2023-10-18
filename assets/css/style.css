@@ -14,6 +14,39 @@ body{
     background-color: #06283d;   
 }
 
+.topnav{
+  top:0px;  
+  position: fixed;
+  width: 90%;
+  margin-top: 20px;
+  height: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 35px;
+  color: #f0f8ff;
+  text-align: center;
+  padding-bottom: 20px;
+  background: #ffffff00;
+  box-shadow: 0 0 10px black;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  font-family: 'Poppins', sans-serif;
+}
+.logonav {
+    float: left;
+    background-color: rgba(54, 115, 19, 0);
+    background-size: contain;
+    background-image: url(../images/LogoWhite.svg);
+    display: flex;
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+    margin-top: 0px;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    position: fixed;
+    
+  }
 .container{
     position: relative;
     width: 400px;
@@ -146,7 +179,7 @@ body{
     font-weight: 500; 
 }
 
-.not-found{
+.error404{
     width: 100%;
     text-align: center;
     margin-top: 50px;
@@ -155,11 +188,11 @@ body{
     display: none;
 }
 
-.not-found img{
+.error404 img{
     width: 70%;
 }
 
-.not-found p{
+.error404 p{
     color: #06283d;
     font-size: 22px;
     font-weight: 500;
@@ -181,4 +214,22 @@ body{
         scale: 1;
         opacity: 1;
     }
-} 
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    height: min-content;
+    padding: 15px 0px;
+    font-size: 18px;
+    color: #06283d;
+    background-color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+a{
+    color: #06283d;
+}
