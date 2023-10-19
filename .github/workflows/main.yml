@@ -9,5 +9,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '19'
+        env: 
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
       - run: npm install
       - run: npm run build
