@@ -10,12 +10,13 @@ jobs:
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
         with:
-          node-version: '20.0'
+          node-version: '19'
           registry-url: 'https://registry.npmjs.org'
           # Defaults to the user or organization that owns the workflow file
-          scope: '@AlessandroFerrante'
+          scope: '@octocat'
       - run: yarn
       - run: yarn npm publish // for Yarn version 1, use `yarn publish` instead
         env:
-           VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
-           VITE_API_URL: ${{ secrets.VITE_API_URL }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
