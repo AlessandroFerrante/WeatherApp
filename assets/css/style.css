@@ -219,14 +219,14 @@ body{
 .messageBox{
     top:0px;  
     position: fixed;
-    margin-top: 150px;
-    left: 100px;
+    text-wrap: nowrap;
+    margin-top: 88px;
     padding: 10px 10px;
     background-color: #dff6ff;
     border-radius: 50px;
     color: #06283d;
-    font-weight: 700;
-    font-size: 1.2rem;
+    font-weight: 800;
+    font-size: 12px;
     font-family: 'Poppins', sans-serif;
 }
 

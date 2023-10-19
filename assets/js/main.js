@@ -31,9 +31,14 @@ search.addEventListener('click', ()=>{
             document.getElementById("messageBox").innerHTML = "Search performed. You have " + (19 - count) + " searches available.";
             count++;
         }else {
-            alert("You have reached the limit of 5 clicks.");
             document.getElementById("messageBox").innerHTML = "You have reached the limit of 20 searches.";
             document.getElementById("search-box button").disabled = true;
+            error404.style.display = 'none';
+            error404.classList.remove('fadeIn');
+            weatherBox.style.display = '';
+            weatherDetails.style.display = '';
+            weatherBox.classList.remove('fadeIn');
+            weatherDetails.classList.remove('fadeIn');
         }
         if(json.cod === '404'){
             container.style.height= '400px';
