@@ -18,19 +18,24 @@ body{
   top:0px;  
   position: fixed;
   width: 90%;
-  margin-top: 20px;
-  height: 50px;
+  margin-top: 10px;
+  height: 40px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 35px;
   color: #f0f8ff;
   text-align: center;
-  padding-bottom: 20px;
-  background: #ffffff00;
+  padding-top: 5px;
+  /*background: #ffffff00;
   box-shadow: 0 0 10px black;
   backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);*/
   font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  border-radius: 33px;
+  background: linear-gradient(145deg, #062b41, #052437);
+  box-shadow:  3px 3px 6px #041c2b,
+             -3px -3px 6px #08344f;
 }
 .logonav {
     float: left;
@@ -38,10 +43,10 @@ body{
     background-size: contain;
     background-image: url(../images/LogoWhite.svg);
     display: flex;
-    height: 50px;
-    width: 50px;
-    margin-left: 20px;
-    margin-top: 0px;
+    height: 35px;
+    width: 35px;
+    margin-left: 15px;
+    margin-top: -4px;
     background-repeat: no-repeat;
     text-decoration: none;
     position: fixed;
@@ -49,17 +54,21 @@ body{
   }
 .container{
     position: relative;
-    width: 400px;
-    height: 105px;
+    width: 320px;
+    height: 60px;
     background-color: #fff;
-    padding: 28px 32px;
+    padding: 9px 32px;
     overflow: hidden;
-    border-radius: 18px;
+    border-radius: 35px;
     font-family: 'Roboto', sans-serif;
     transition: 0.6s ease-out;
+    background: linear-gradient(315deg, #052437, #062b41);
+box-shadow:  -5px -5px 27px #041a28,
+             5px 5px 27px #083652;
 }
 
 .search-box{
+    background-color: linear-gradient(315deg, #052437, #062b41);
     width: 100%;
     height: min-content;
     display: flex;
@@ -67,41 +76,42 @@ body{
     justify-content: space-between;
 }
 .search-box input{
-    color: #06283d;
+    background: #062b4100;
+    color: #20638c;
     width: 80%;
-    font-size: 24px;
-    font-weight: 500;
-    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 550;
+    /*text-transform: uppercase;*/
     padding-left: 32px;   
 }
 
 .search-box input::placeholder{
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 500;
-    color: #06283d;
+    color: #20638c;
     text-transform: capitalize;
 }
 
 .search-box button{
     cursor: pointer;
-    width: 50px;
-    height: 50px;
-    color: #06283d;
-    background-color: #dff6ff;
+    width: 40px;
+    height: 40px;
+    color: #20638c;
+    background-color: #20638c00;
     border-radius: 50%;
     font-size: 22px;
     transition: 0.4s ease;
 }
 
 .search-box button:hover{
-    color: #fff;
-    background: #06283d;
+    color: #cedeced8;
+    background: #20638c00;
 }
 
 .search-box i{
     position: absolute;
-    color: #06283d;
-    font-size: 28px;
+    color: #20638c;
+    font-size: 22px;
 
 }
 
@@ -110,14 +120,14 @@ body{
 }
 
 .weather-box img{
-    width: 60%;
+    width: 40%;
     margin-top: 30px;
 }
 
 .weather-box .temperature{
     position: relative;
-    color: #06283d;
-    font-size: 4rem;
+    color: #20638c;
+    font-size: 3rem;
     font-weight: 800;
     margin-top:30px;
     margin-left: -16px;
@@ -130,7 +140,7 @@ body{
 }
 
 .weather-box .description{
-    color: #06283d;
+    color: #20638c;
     font-size: 22px;
     font-weight: 500;
     text-transform: capitalize;
@@ -161,21 +171,21 @@ body{
 }
 
 .weather-details i{
-    color: #06283d;
+    color: #20638c;
     font-size: 26px;
     margin-right: 10px;
     margin-top: 6px;
 }
 
 .weather-details span{
-    color: #06283d;
-    font-size: 22px;
+    color: #20638c;
+    font-size: 15px;
     font-weight: 500;
 }
 
 .weather-details p{
-    color: #06283d;
-    font-size: 14px;
+    color: #20638c;
+    font-size: 10px;
     font-weight: 500; 
 }
 
@@ -189,11 +199,11 @@ body{
 }
 
 .error404 img{
-    width: 70%;
+    width: 30%;
 }
 
 .error404 p{
-    color: #06283d;
+    color: #20638c;
     font-size: 22px;
     font-weight: 500;
     margin-top: 12px;
@@ -224,10 +234,14 @@ body{
     padding: 10px 10px;
     background-color: #dff6ff;
     border-radius: 50px;
-    color: #06283d;
+    color: #20638c;
     font-weight: 800;
-    font-size: 12px;
+    font-size: 10px;
     font-family: 'Poppins', sans-serif;
+    border-radius: 33px;
+background: #06283d;
+box-shadow: inset 3px 3px 6px #041c2b,
+            inset -3px -3px 6px #08344f;
 }
 
 .footer{
@@ -238,9 +252,9 @@ body{
     justify-content: center;
     height: min-content;
     padding: 15px 0px;
-    font-size: 18px;
+    font-size: 10px;
     color: #06283d;
-    background-color: aliceblue;
+    background-color: #054065;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
